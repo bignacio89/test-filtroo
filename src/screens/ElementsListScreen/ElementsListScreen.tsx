@@ -1,16 +1,16 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import ElementsList from "../../components/ElementsList/ElementsList";
+import styles from "./Styles";
 
 const ElementsListScreen = () => {
 
     return (
-        <>
-            <Text>AQUI VA EL ELEMENT LIST SCREEN</Text>
-            <ElementsList />
-        </>
-
+        <View style={styles.container}>
+          <ElementsList />
+        </View>
+           
     )
-}
+};
 
 export default ElementsListScreen

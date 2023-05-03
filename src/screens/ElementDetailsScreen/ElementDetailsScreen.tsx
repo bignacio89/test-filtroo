@@ -1,27 +1,16 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { View } from "react-native";
+import ElementDetailsCard from "../../components/ElementDetailsCard/ElementDetailsCard";
+import styles from "./Styles"
 
+const ElementDetailsScreen = ({ route }) => {
+  const dataCard = route.params.card.card;
 
+  return (
+    <View style={styles.container}>
+      <ElementDetailsCard card={dataCard} />
+    </View>
+  );
+};
 
-const ElementDetailsScreen = ({route}) => {
-    console.log('AQUIIIII NO ARRIESSGOOOOO Dossss', route.params.card.card)
-
-    const dataCard = route.params.card.card
-
-    return (
-        <>
-   
-                
-                <View>
-                    <Image source={{uri:route.params.card.card.download_url}} resizeMode="cover"/>
-                    <Text>{route.params.card.card.author}</Text>
-                </View>
-                
-        
-            
-        </>
-
-    )
-}
-
-export default ElementDetailsScreen
+export default ElementDetailsScreen;

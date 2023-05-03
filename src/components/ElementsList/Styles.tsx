@@ -8,6 +8,10 @@ const styles = StyleSheet.create({
     margin: 'auto',
     padding: 5,
   },
+  scrollView: {
+    flex: 1,
+    backgroundColor: 'pink',
+  },
 });
 
 export default styles
